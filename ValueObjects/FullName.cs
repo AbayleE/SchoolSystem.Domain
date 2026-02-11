@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace SchoolSystem.Domain.valueObject;
+namespace SchoolSystem.Domain.ValueObjects;
 [Owned]
 public class FullName
 {
-    public string First { get; set; }
-    public string Middle { get; set; }
-    public string Last { get; set; }
+    public string? First { get; set; }
+    public string? Middle { get; set; }
+    public string? Last { get; set; }
 
-    private FullName() { } 
+    private FullName() { }
 
     public FullName(string first, string middle, string last)
     {

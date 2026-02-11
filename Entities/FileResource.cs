@@ -7,7 +7,7 @@ public class FileResource : IHasTenant
     public Guid Id { get; set; }
     public Guid TenantId { get; set; }
 
-    public string Url { get; set; }
+    public string? Url { get; set; }
     public FileType FileType { get; set; }
     public Guid? RelatedEntityId { get; set; }
 }

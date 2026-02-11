@@ -8,6 +8,6 @@ public class ApplicationDocument : IHasTenant
     public Guid TenantId { get; set; }
 
     public Guid ApplicationId { get; set; }
-    public string FileUrl { get; set; }
+    public string? FileUrl { get; set; }
     public FileType FileType { get; set; }
 }
