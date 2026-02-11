@@ -7,5 +7,5 @@ public class Teacher : IHasTenant
     public Guid TenantId { get; set; }
 
     public Guid UserId { get; set; }
-    public string Specialization { get; set; }
+    public string? Specialization { get; set; }
 }

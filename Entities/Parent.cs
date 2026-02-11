@@ -1,5 +1,5 @@
 using SchoolSystem.Domain.Interfaces;
-using SchoolSystem.Domain.valueObject;
+using SchoolSystem.Domain.ValueObjects;
 
 namespace SchoolSystem.Domain.Entities;
 public class Parent : IHasTenant
@@ -8,5 +8,5 @@ public class Parent : IHasTenant
     public Guid TenantId { get; set; }
 
     public Guid UserId { get; set; }
-    public Address Address { get; set; }
+    public Address? Address { get; set; }
 }

@@ -7,9 +7,9 @@ public class AuditLog : IHasTenant
     public Guid TenantId { get; set; }
 
     public Guid UserId { get; set; }
-    public string Action { get; set; }
-    public string Entity { get; set; }
-    public string Details { get; set; }
+    public string? Action { get; set; }
+    public string? Entity { get; set; }
+    public string? Details { get; set; }
 
     public DateTime Timestamp { get; set; }
 }

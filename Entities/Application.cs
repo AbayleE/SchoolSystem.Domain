@@ -1,6 +1,6 @@
 using SchoolSystem.Domain.Enums;
 using SchoolSystem.Domain.Interfaces;
-using SchoolSystem.Domain.valueObject;
+using SchoolSystem.Domain.ValueObjects;
 
 namespace SchoolSystem.Domain.Entities;
 
@@ -10,14 +10,15 @@ public class Application : IHasTenant
     public Guid Id { get; set; }
     public Guid TenantId { get; set; }
 
-    public required FullName Student { get; set; }
-    public required string GradeApplied { get; set; }
-    public required string CurrentGradeLevel { get; set; }
-    public required string Gpa { get; set; }
     
-    public required FullName ParentName { get; set; }
-    public required string ParentEmail { get; set; }
-    public required string ParentPhone { get; set; }
+    public FullName? Student { get; set; }
+    public string? GradeApplied { get; set; }
+    public string? CurrentGradeLevel { get; set; }
+    public string? Gpa { get; set; }
+    
+    public FullName? ParentName { get; set; }
+    public string? ParentEmail { get; set; }
+    public string? ParentPhone { get; set; }
     
     public Address? Address { get; set; }
     
