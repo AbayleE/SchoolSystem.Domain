@@ -5,5 +5,8 @@ public enum FileType
     Photo,
     Transcript,
     ApplicationDocument,
-    Other
+    Passport,
+    MedicalRecord,
+    ReportCard,
+    ProofOfAddress
 }
