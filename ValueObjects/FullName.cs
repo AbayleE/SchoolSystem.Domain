@@ -4,16 +4,16 @@ namespace SchoolSystem.Domain.ValueObjects;
 [Owned]
 public class FullName
 {
-    public string? First { get; set; }
-    public string? Middle { get; set; }
-    public string? Last { get; set; }
+    public string? FirstName { get; set; }
+    public string? MiddleName { get; set; }
+    public string? LastName { get; set; }
 
     private FullName() { }
 
     public FullName(string first, string middle, string last)
     {
-        First = first;
-        Middle = middle;
-        Last = last;
+        FirstName = first;
+        MiddleName = middle;
+        LastName = last;
     }
 }

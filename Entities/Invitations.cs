@@ -1,7 +1,12 @@
 using SchoolSystem.Domain.Interfaces;
 using SchoolSystem.Domain.Enums;
 namespace SchoolSystem.Domain.Entities;
-public class Invitation: IEntity
+
+// An invitation email sent to onboard a new user.
+// Carries TenantId and Role so registration knows exactly who to create.
+// SystemOwner invites SchoolAdmins (TenantId = new school).
+// SchoolAdmin invites Teachers, Parents, Students (TenantId = their school).
+public class Invitation: IEntity, IHasTenant
 {
     public Guid Id { get; set; }
     public Guid TenantId { get; set; }
@@ -14,8 +19,7 @@ public class Invitation: IEntity
     public bool Used { get; set; }
 
     public Guid SentByUserId { get; set; }
-    public UserRole SentByRole { get; set; }
-    public string? SendByEmail { get; set; }
+    public User? SentByUser { get; set; }
     
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
