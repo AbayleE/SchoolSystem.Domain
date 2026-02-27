@@ -1,20 +1,24 @@
+using SchoolSystem.Domain.Enums;
 using SchoolSystem.Domain.Interfaces;
+
 namespace SchoolSystem.Domain.Entities;
-// Records a student being enrolled in a class for an academic year.
-public class Enrollment : IEntity, IHasTenant
+
+// Join table linking students to their parents with relationship context.
+// Replaces the flat ParentId1/ParentId2 fields on Student.
+public class StudentParent : IEntity, IHasTenant
 {
     public Guid Id { get; set; }
     public Guid TenantId { get; set; }
 
     public Guid StudentId { get; set; }
     public Student? Student { get; set; }
-    
-    public Guid ClassId { get; set; }
-    public Class? Class { get; set; }
-    
-    public Guid AcademicYearId { get; set; }
-    public AcademicYear? AcademicYear { get; set; }
-    
+
+    public Guid ParentId { get; set; }
+    public Parent? Parent { get; set; }
+
+    public GuardianRelationship Relationship { get; set; }
+    public bool IsPrimaryContact { get; set; }
+
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public DateTime? DeletedAt { get; set; }

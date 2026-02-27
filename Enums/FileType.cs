@@ -8,5 +8,7 @@ public enum FileType
     Passport,
     MedicalRecord,
     ReportCard,
-    ProofOfAddress
+    ProofOfAddress,
+    AssignmentSubmission,
+    Other
 }

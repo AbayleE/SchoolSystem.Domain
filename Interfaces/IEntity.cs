@@ -1,6 +1,6 @@
 namespace SchoolSystem.Domain.Interfaces;
 
-public interface IEntity : IHasTenant
+public interface IEntity 
 {
     Guid Id { get; set; }
     DateTime CreatedAt { get; set; }

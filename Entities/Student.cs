@@ -1,20 +1,22 @@
+using SchoolSystem.Domain.Enums;
 using SchoolSystem.Domain.Interfaces;
-using SchoolSystem.Domain.ValueObjects;
 
 namespace SchoolSystem.Domain.Entities;
-public class Student : IEntity
+
+// A student profile linked to a User account.
+// Connects to parents via StudentParent join table.
+public class Student : IEntity, IHasTenant
 {
     public Guid Id { get; set; }
     public Guid TenantId { get; set; }
-
     public Guid UserId { get; set; }
-    public DateTime Dob { get; set; }
-    public string? Gender { get; set; }
-
-    public Guid ParentId1 { get; set; }
-    public Guid ParentId2 { get; set; }
+    public User? User { get; set; }
     
-    public string? Status { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public Gender Gender { get; set; }
+    public StudentStatus Status { get; set; }
+   
+    public List<StudentParent> Parents { get; set; } = [];
     
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
