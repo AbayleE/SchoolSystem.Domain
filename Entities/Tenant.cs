@@ -1,3 +1,4 @@
+using System;
 using SchoolSystem.Domain.Enums;
 using SchoolSystem.Domain.Interfaces;
 
@@ -17,4 +18,5 @@ public class Tenant : IEntity
     public DateTime UpdatedAt { get; set; }
     public DateTime? DeletedAt { get; set; }
     public bool IsDeleted { get; set; }
+    public bool IsSchool { get; set; } = true; // Distinguishes actual schools from potential future tenant types (e.g. districts)
 }

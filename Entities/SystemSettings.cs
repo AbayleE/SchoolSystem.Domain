@@ -1,4 +1,5 @@
 
+using System;
 using SchoolSystem.Domain.Interfaces;
 
 namespace SchoolSystem.Domain.Entities;

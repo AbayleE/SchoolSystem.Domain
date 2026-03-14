@@ -1,3 +1,4 @@
+using System;
 using SchoolSystem.Domain.Interfaces;
 using SchoolSystem.Domain.Enums;
 namespace SchoolSystem.Domain.Entities;

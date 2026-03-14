@@ -1,3 +1,4 @@
+using System;
 using SchoolSystem.Domain.Interfaces;
 namespace SchoolSystem.Domain.Entities;
 // Records a student being enrolled in a class for an academic year.

@@ -1,3 +1,5 @@
+using System;
+
 namespace SchoolSystem.Domain.Interfaces;
 
 public interface IEntity 

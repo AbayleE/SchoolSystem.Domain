@@ -1,3 +1,4 @@
+using System;
 using SchoolSystem.Domain.Interfaces;
 using SchoolSystem.Domain.Enums;
 using SchoolSystem.Domain.ValueObjects;
@@ -18,6 +19,9 @@ public class User : IEntity , IHasTenant
     public string? PasswordHash { get; set; }
     public UserRole Role { get; set; }
     public bool IsActive { get; set; } = true;
+    
+    public string? PasswordResetToken { get; set; }
+    public DateTime? PasswordResetTokenExpiry { get; set; }
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

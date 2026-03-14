@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using SchoolSystem.Domain.Interfaces;
 namespace SchoolSystem.Domain.Entities;
 
